@@ -1,5 +1,4 @@
 
-import React from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchArticleById } from "@/services/articleService";
@@ -62,7 +61,7 @@ const ArticleDetailPage = () => {
           )}
           
           <Button variant="outline" size="sm" asChild className="ml-auto">
-            <Link to={`/edit/${article.id}`} className="flex items-center gap-1.5">
+            <Link to={`/${article._id}`} className="flex items-center gap-1.5">
               <Edit className="size-4" />
               <span>Edit</span>
             </Link>
